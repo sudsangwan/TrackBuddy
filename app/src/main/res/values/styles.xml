@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <!-- Custom Toolbar theme. -->
+    <style name="MyCustomToolBarTheme"  parent="ThemeOverlay.AppCompat.Dark">
+    <!--Title Color-->
+    <item name="android:textColorPrimary">#f6f6f6</item>
+    <!--otheritems on toolbar color-->
+    <item name="android:textColorSecondary">#f6f6f6</item>
+    </style>
+    
+    <style name="ContactListStyle"></style>
+
+</resources>

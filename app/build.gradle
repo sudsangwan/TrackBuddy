@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'TrackBuddy'
+            keyPassword 'release@3786'
+            storePassword 'release@3786'
+            storeFile file('/Users/manuchaudhary/AndroidStudioProjects/keystore.release.jks')
+        }
+    }
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+    defaultConfig {
+        applicationId "com.santellia.sud.trackbuddy"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.1"
+        multiDexEnabled true
+        signingConfig signingConfigs.config
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable true
+            signingConfig signingConfigs.config
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g" //specify the heap size for the dex process
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile files('libs/volley.jar')
+    compile files('libs/crouton-1.8.jar')
+    compile files('libs/gson-2.3.1.jar')
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:design:23.1.1'
+}

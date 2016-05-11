@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="base_app_color">#12d5cf</color>
+    <color name="splash_text_color">#ffffff</color>
+    <color name="white_color">#ffffffff</color>
+    <color name="button_color">#0c8e8a</color>
+
+</resources>
